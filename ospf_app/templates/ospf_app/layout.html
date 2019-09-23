@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    	{% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Django OSFP Ansible APP</title>
+
+ 
+
+        <link rel="stylesheet" href="{% static 'ospf_app/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'ospf_app/css/bootstrap-theme.min.css' %}">
+        <link rel="stylesheet" href="{% static 'ospf_app/css/style.css' %}">
+        <script type='text/javascript' src="{% static 'ospf_app/js/jquery-3.3.1.min.js' %}"></script>
+        <script type='text/javascript' src="{% static 'ospf_app/js/bootstrap3-typeahead.min.js' %}"></script>
+        <script type='text/javascript' src="{% static 'ospf_app/js/bootstrap.min.js' %}"></script>
+        <script type='text/javascript' src="{% static 'ospf_app/js/bootstrap-multiselect.js' %}"></script>
+        <script type='text/javascript' src="{% static 'ospf_app/js/sweetalert.min.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'ospf_app/css/bootstrap-multiselect.css' %}">
+
+
+    </head>
+
+    <body>
+
+    <div class="container">
+      <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Django Ansible app</a>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Option 1</a></li>
+                <li class="active"><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+                <li><a href="#">Option 4</a></li>
+                <li class="addset bord"><a href="#">Option 5</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> {{ user }}</a></li>
+                <li><a href="/FW/logout"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+              </ul>
+            </div>
+      </nav>
+      {% block content %}
+    	{% endblock %}
+    </div>
+
+    <script type='text/javascript' src="{% static 'ospf_app/js/script.js' %}"></script>
+    </body>
+
+</html>
+

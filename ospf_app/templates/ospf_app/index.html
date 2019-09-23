@@ -1,0 +1,61 @@
+{% extends 'ospf_app/layout.html' %}
+{% load static %}
+{% block content %}
+      <h2>Check Conductivity</h2>
+      <div id="appform">
+	      <form id="ping_form" action="/ping/" class="form-horizontal" method="POST">
+	      	{% csrf_token %}
+	        <div class="form-group col-sm-5"> 
+	          <label for="device_name" class="col-sm-6 control-label">Device Name</label>
+	          <div class="col-sm-6">
+	            <select class="form-control" name="device-name" required>
+	              {% for device in DeviceList %}
+	              <option value="{{ device.1 }}">{{ device.0 }}</option>
+	              {% endfor %}
+	            </select>
+	          </div>
+	        </div>
+	        <!-- <div class="form-group col-sm-5">
+	          <label for="logical_systems" class="col-sm-6 control-label">Logical Systems</label>
+	          <div class="col-sm-6">
+	            <select class="form-control" id="logical_system1" name="logical_systems1" title="1" required></select>
+	          </div>
+	        </div>
+	        <div class="form-group col-sm-5 ">
+	            <label for="app_name" class="col-sm-6 control-label">Application Name</label>
+	            <div class="col-sm-6 app_name1" title="1">
+	              <input type="text" class="form-control" id="app_name1" name="app_name1" title="1" placeholder="Application Name" required>
+	            </div>
+	          </div>
+	          <div class="form-group col-sm-5">
+	            <label for="protocol" class="col-sm-6 control-label">Protocol</label>
+	            <div class="col-sm-6">
+	              <select class="form-control" id="protocol1" name="protocol1" title="1" required>
+	                  <option value="tcp">TCP</option>
+	                  <option value="udp">UDP</option>
+	              </select>
+	            </div>
+	          </div>
+	        <div class="col-sm-12" style='padding:0 !important'>
+	          <div class="form-group col-sm-5">
+	            <label class="col-sm-6 control-label" for="single_port">Port</label>
+	            <div class="col-sm-6" id="port1" title="1">
+	              <input type="number" class="single_port form-control" title="1" id="single_port1" name="single_port1" placeholder="Single Port" required>
+	            </div>
+	            <div class="col-sm-6 col-sm-offset-12"><input type="button" title="1" id="portBtn1" class="btn but" value="Range" name="range"></div>
+	          </div>
+	        </div>
+	        <div class="form-group">
+	        </div> -->
+	      	<div class="invalid-feedback">Error</div>
+	      	<div class="valid-feedback">Success</div>
+	        <div class="form-group col-sm-5">
+	        	<button type="submit" class="btn but">Ping</button>
+	        </div>
+	      </form>
+      </div>
+      <!-- <div class="col-sm-offset-9 col-sm-4">
+        <button id="addapp" title="1" class="btn but" >Add</button>
+        <button id="commitapp"  class="btn but" >Commit</button>
+      </div>  -->
+{% endblock %}

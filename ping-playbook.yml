@@ -1,0 +1,7 @@
+---
+- name: ping example playbook
+  hosts: '{{ host }}'
+
+  tasks:
+   - name: test ping
+     ping:

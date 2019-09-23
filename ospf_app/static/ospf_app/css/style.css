@@ -1,0 +1,56 @@
+.login-body { 
+    background-image: url('../img/bk2.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.body{
+    background-color: #8080800d
+  }
+  .panel-default {
+  opacity: 0.9;
+  margin-top:30px;
+  }
+  .form-group.last { 
+      margin-bottom:0px; 
+    }
+@media (min-width: 1200px){
+    .container-login {
+        padding-top: 60px;
+    }
+}
+.img{
+    background-image: url('../img/orange.png'); 
+    width: 272px;
+    height: 160px;
+    background-size: cover;
+}
+.dn{
+    padding-top: 60px;
+}
+.dn h1{
+    text-align: center;
+    font-weight: bold;
+    color:#ff6324
+}
+.but{
+    background-color:#ff6324 !important;
+    border-color: #ff6324 !important;
+    color: white;
+}
+.form-control-feedback{
+    pointer-events: fill !important;
+}
+.group{
+    padding: 0 !important;
+}
+.bord{
+    border-right: 1px solid #dedddd;
+}
+.active{
+    font-weight: bold;
+}
+.swal-button{
+    background-color: red;
+}
